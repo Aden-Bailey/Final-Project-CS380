@@ -22,16 +22,25 @@ Each process has a trace mask. When a syscall is executed, the kernel checks if 
 
 ## How to Run
 
+1. Build and launch xv6:
+
 ```bash
 make clean
 make qemu
 
-## Then in xv6:
+2. Once xv6 boots, run the test program:
+
+```bash
 tracetest
 
-# Example output
+## Example Output
+
+Below is a sample of the tracing output when running 'tracetest':
+
+```text
 5: syscall write -> 23
 6: syscall write -> 23
+7. syscall write -> 23
 
 ## Testing
 - Basic syscall tracing using write()
